@@ -1,0 +1,38 @@
+﻿@page
+@model TurAppen.Pages.RegisterModel
+@{
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3">Lag bruker</h1>
+
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger"> </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="registerViewModel.Email">Email</label>
+                    <input type="text" asp-for="registerViewModel.Email" class="form-control" />
+                    <span asp-validation-for="registerViewModel.Email" class="text-danger" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="registerViewModel.Password">Passord</label>
+                    <input type="password" asp-for="registerViewModel.Password" class="form-control" />
+                    <span asp-validation-for="registerViewModel.Password" class="text-danger" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="registerViewModel.ConfirmPassword">Bekreft Passord</label>
+                    <input type="password" asp-for="registerViewModel.ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="registerViewModel.ConfirmPassword" class="text-danger" />
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
